@@ -1,0 +1,8 @@
+<tr id="<%="task#{task.id}"%>">
+  <td><%= link_to 'Complate', task, method: :delete, remote: true %></td>
+  <td><%= task.title %></td>
+  <td><%= task.content %></td>
+  <td><%= task.due_at %></td>
+  <td><%= link_to 'Show', task %></td>
+  <td><%= link_to 'Edit', edit_task_path(task) %></td>
+</tr>

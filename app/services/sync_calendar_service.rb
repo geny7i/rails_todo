@@ -23,9 +23,9 @@ class SyncCalendarService
     service = Google::Apis::CalendarV3::CalendarService.new
     service.authorization = client
     service.insert_event(user.calendar_id, calendar_event)
-    rescue Google::Apis::ClientError
-    refresh_token
-    retry
+    rescue Google::Apis::AuthorizationError
+      refresh_token
+      retry
   end
 
   def update_event
@@ -34,9 +34,9 @@ class SyncCalendarService
     service = Google::Apis::CalendarV3::CalendarService.new
     service.authorization = client
     service.update_event(user.calendar_id, task.calendar_event_uid, calendar_event)
-    rescue Google::Apis::ClientError
-    refresh_token
-    retry
+    rescue Google::Apis::AuthorizationError
+      refresh_token
+      retry
   end
 
   def delete_event
@@ -45,6 +45,9 @@ class SyncCalendarService
     service = Google::Apis::CalendarV3::CalendarService.new
     service.authorization = client
     service.delete_event(user.calendar_id, task.calendar_event_uid)
+    rescue Google::Apis::AuthorizationError
+      refresh_token
+      retry
   end
 
   private

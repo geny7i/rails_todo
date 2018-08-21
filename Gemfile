@@ -45,6 +45,9 @@ gem 'devise'
 # to load environment variables from `.env`.
 gem 'dotenv-rails'
 
+# link google calendar
+gem 'google-api-client', require: 'google/apis/calendar_v3'
+
 # to Use sidekiq
 gem 'redis-namespace'
 gem 'sidekiq'

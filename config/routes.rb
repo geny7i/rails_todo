@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'google_auth/callback'
+  get 'google_auth/redirect'
   resources :tasks, path: '/'
   scope :auth do
     devise_for :users

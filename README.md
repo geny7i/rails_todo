@@ -23,12 +23,14 @@ rails db:migrate
 * Deployment instructions
 get client id & client secret form https://console.developers.google.com/
 
-setENV
 ```
 export GOOGLE_CLIENT_ID=m"hogero"
 export GOOGLE_CLIENT_SECRET="hugarien"
 ```
-```heroku
+
+on heroku
+
+```
 heroku config:set GOOGLE_CLIENT_ID="your app id"
 heroku config:set GOOGLE_CLIENT_SECRET="your client secret"
 ```

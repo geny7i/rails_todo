@@ -13,6 +13,7 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+
 ```
 bundle install
 ```
@@ -29,6 +30,11 @@ export GOOGLE_CLIENT_SECRET="hugarien"
 ```
 
 on heroku
+
+```production.rb
+  Rails.application.routes.default_url_options = { host: '[your host]' }
+
+```
 
 ```
 heroku config:set GOOGLE_CLIENT_ID="your app id"

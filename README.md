@@ -24,7 +24,7 @@ rails db:migrate
 get client id & client secret form https://console.developers.google.com/
 
 ```
-export GOOGLE_CLIENT_ID=m"hogero"
+export GOOGLE_CLIENT_ID="hogero"
 export GOOGLE_CLIENT_SECRET="hugarien"
 ```
 

@@ -31,9 +31,9 @@ export GOOGLE_CLIENT_SECRET="hugarien"
 
 on heroku
 
-```production.rb
-  Rails.application.routes.default_url_options = { host: '[your host]' }
-
+production.rb
+```
+Rails.application.routes.default_url_options = { host: '[your host]' }
 ```
 
 ```
